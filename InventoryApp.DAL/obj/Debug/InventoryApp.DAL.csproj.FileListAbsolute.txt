@@ -1,0 +1,6 @@
+E:\Andrew\Personal\CB+\InventoryApp\InventoryApp.DAL\obj\Debug\ResolveAssemblyReference.cache
+E:\Andrew\Personal\CB+\InventoryApp\InventoryApp.DAL\bin\Debug\DB\InventoryDB.sdf
+E:\Andrew\Personal\CB+\InventoryApp\InventoryApp.DAL\bin\Debug\InventoryApp.DAL.dll
+E:\Andrew\Personal\CB+\InventoryApp\InventoryApp.DAL\bin\Debug\InventoryApp.DAL.pdb
+E:\Andrew\Personal\CB+\InventoryApp\InventoryApp.DAL\obj\Debug\InventoryApp.DAL.dll
+E:\Andrew\Personal\CB+\InventoryApp\InventoryApp.DAL\obj\Debug\InventoryApp.DAL.pdb

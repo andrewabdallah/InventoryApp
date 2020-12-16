@@ -1,0 +1,7 @@
+E:\Andrew\Personal\CB+\InventoryApp\InventoryApp\bin\Debug\InventoryApp.exe
+E:\Andrew\Personal\CB+\InventoryApp\InventoryApp\bin\Debug\InventoryApp.pdb
+E:\Andrew\Personal\CB+\InventoryApp\InventoryApp\obj\Debug\ResolveAssemblyReference.cache
+E:\Andrew\Personal\CB+\InventoryApp\InventoryApp\obj\Debug\InventoryApp.Properties.Resources.resources
+E:\Andrew\Personal\CB+\InventoryApp\InventoryApp\obj\Debug\InventoryApp.csproj.GenerateResource.Cache
+E:\Andrew\Personal\CB+\InventoryApp\InventoryApp\obj\Debug\InventoryApp.exe
+E:\Andrew\Personal\CB+\InventoryApp\InventoryApp\obj\Debug\InventoryApp.pdb
