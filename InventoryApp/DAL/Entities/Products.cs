@@ -6,7 +6,7 @@ using System.Drawing;
 
 namespace InventoryApp.DAL.Entities
 {
-    class Products
+    public class Products
     {
         #region Private Fields
         private Nullable<int> _PRODUCT_ID;

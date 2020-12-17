@@ -18,6 +18,7 @@
     <NativePlatformName>Windows CE</NativePlatformName>
     <FormFactorID>
     </FormFactorID>
+    <DeployDirPrefix>\</DeployDirPrefix>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -49,7 +50,9 @@
     <Reference Include="mscorlib" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Data.SqlServerCe, Version=3.5.0.0, Culture=neutral, PublicKeyToken=3be235df1c8d2ad3, processorArchitecture=MSIL" />
+    <Reference Include="System.Data.SqlServerCe, Version=3.5.0.0, Culture=neutral, PublicKeyToken=3be235df1c8d2ad3, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data" />
@@ -58,8 +61,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DAL\API\JSON.cs" />
-    <Compile Include="DAL\API\OpenFoodFactsAPI.cs" />
+    <Compile Include="BLL\ProductExpiryDatesBLL.cs" />
+    <Compile Include="BLL\ProductsBLL.cs" />
+    <Compile Include="DAL\API\OpenFoodFacrs\JSON.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DAL\API\OpenFoodFacrs\OpenFoodFactsAPI.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DAL\Datasets\dsProductExpiryDates.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsProductExpiryDates.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DAL\DBConnection\DBCon.cs" />
     <Compile Include="DAL\Entities\ProductExpiryDates.cs" />
     <Compile Include="DAL\Entities\Products.cs" />
@@ -125,12 +139,22 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DAL\DB\InventoryDB.sdf">
+    <Content Include="DB\InventoryDB.sdf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="BLL\" />
+    <None Include="DAL\Datasets\dsProductExpiryDates.xsc">
+      <DependentUpon>dsProductExpiryDates.xsd</DependentUpon>
+    </None>
+    <None Include="DAL\Datasets\dsProductExpiryDates.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsProductExpiryDates.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DAL\Datasets\dsProductExpiryDates.xss">
+      <DependentUpon>dsProductExpiryDates.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />
   <ProjectExtensions>

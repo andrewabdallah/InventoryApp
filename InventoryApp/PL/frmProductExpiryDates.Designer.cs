@@ -29,12 +29,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.mainMenu1 = new System.Windows.Forms.MainMenu();
             this.lblItemName = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
+            this.pRODUCTEXPIRYDATESBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dgvProductExpiryDates = new System.Windows.Forms.DataGrid();
             this.dtppExpiryDate = new System.Windows.Forms.DateTimePicker();
             this.btnAddExpiryDate = new System.Windows.Forms.Button();
+            this.dsProductExpiryDates = new InventoryApp.DAL.Datasets.dsProductExpiryDates();
+            this.pRODUCT_EXPIRY_DATESTableAdapter = new InventoryApp.DAL.Datasets.dsProductExpiryDatesTableAdapters.PRODUCT_EXPIRY_DATESTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.pRODUCTEXPIRYDATESBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsProductExpiryDates)).BeginInit();
             this.SuspendLayout();
             // 
             // lblItemName
@@ -56,9 +62,16 @@
             this.btnBack.Text = "Back";
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
+            // pRODUCTEXPIRYDATESBindingSource
+            // 
+            this.pRODUCTEXPIRYDATESBindingSource.AllowNew = false;
+            this.pRODUCTEXPIRYDATESBindingSource.DataMember = "PRODUCT_EXPIRY_DATES";
+            this.pRODUCTEXPIRYDATESBindingSource.DataSource = this.dsProductExpiryDates;
+            // 
             // dgvProductExpiryDates
             // 
             this.dgvProductExpiryDates.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.dgvProductExpiryDates.DataSource = this.pRODUCTEXPIRYDATESBindingSource;
             this.dgvProductExpiryDates.Location = new System.Drawing.Point(8, 106);
             this.dgvProductExpiryDates.Name = "dgvProductExpiryDates";
             this.dgvProductExpiryDates.Size = new System.Drawing.Size(214, 106);
@@ -82,6 +95,17 @@
             this.btnAddExpiryDate.Size = new System.Drawing.Size(75, 24);
             this.btnAddExpiryDate.TabIndex = 10;
             this.btnAddExpiryDate.Text = "Add";
+            this.btnAddExpiryDate.Click += new System.EventHandler(this.btnAddExpiryDate_Click);
+            // 
+            // dsProductExpiryDates
+            // 
+            this.dsProductExpiryDates.DataSetName = "dsProductExpiryDates";
+            this.dsProductExpiryDates.Prefix = "";
+            this.dsProductExpiryDates.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // pRODUCT_EXPIRY_DATESTableAdapter
+            // 
+            this.pRODUCT_EXPIRY_DATESTableAdapter.ClearBeforeFill = true;
             // 
             // frmProductExpiryDates
             // 
@@ -98,6 +122,8 @@
             this.Menu = this.mainMenu1;
             this.Name = "frmProductExpiryDates";
             this.Text = "Product Expiry Dates";
+            ((System.ComponentModel.ISupportInitialize)(this.pRODUCTEXPIRYDATESBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsProductExpiryDates)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -109,5 +135,8 @@
         private System.Windows.Forms.DataGrid dgvProductExpiryDates;
         private System.Windows.Forms.DateTimePicker dtppExpiryDate;
         private System.Windows.Forms.Button btnAddExpiryDate;
+        private System.Windows.Forms.BindingSource pRODUCTEXPIRYDATESBindingSource;
+        private InventoryApp.DAL.Datasets.dsProductExpiryDates dsProductExpiryDates;
+        private InventoryApp.DAL.Datasets.dsProductExpiryDatesTableAdapters.PRODUCT_EXPIRY_DATESTableAdapter pRODUCT_EXPIRY_DATESTableAdapter;
     }
 }

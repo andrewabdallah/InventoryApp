@@ -29,9 +29,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.mainMenu1 = new System.Windows.Forms.MainMenu();
             this.btnBack = new System.Windows.Forms.Button();
+            this.productsListBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dgvProductList = new System.Windows.Forms.DataGrid();
+            this.dsProductExpiryDates = new InventoryApp.DAL.Datasets.dsProductExpiryDates();
+            this.productsListTableAdapter = new InventoryApp.DAL.Datasets.dsProductExpiryDatesTableAdapters.ProductsListTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.productsListBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsProductExpiryDates)).BeginInit();
             this.SuspendLayout();
             // 
             // btnBack
@@ -46,13 +52,31 @@
             this.btnBack.Text = "Back";
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
+            // productsListBindingSource
+            // 
+            this.productsListBindingSource.AllowNew = false;
+            this.productsListBindingSource.DataMember = "ProductsList";
+            this.productsListBindingSource.DataSource = this.dsProductExpiryDates;
+            // 
             // dgvProductList
             // 
             this.dgvProductList.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.dgvProductList.DataSource = this.productsListBindingSource;
             this.dgvProductList.Location = new System.Drawing.Point(8, 3);
             this.dgvProductList.Name = "dgvProductList";
             this.dgvProductList.Size = new System.Drawing.Size(214, 209);
             this.dgvProductList.TabIndex = 8;
+            this.dgvProductList.DoubleClick += new System.EventHandler(this.dgvProductList_DoubleClick);
+            // 
+            // dsProductExpiryDates
+            // 
+            this.dsProductExpiryDates.DataSetName = "dsProductExpiryDates";
+            this.dsProductExpiryDates.Prefix = "";
+            this.dsProductExpiryDates.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // productsListTableAdapter
+            // 
+            this.productsListTableAdapter.ClearBeforeFill = true;
             // 
             // frmProductList
             // 
@@ -66,6 +90,8 @@
             this.Menu = this.mainMenu1;
             this.Name = "frmProductList";
             this.Text = "Product List";
+            ((System.ComponentModel.ISupportInitialize)(this.productsListBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsProductExpiryDates)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -74,5 +100,8 @@
 
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.DataGrid dgvProductList;
+        private System.Windows.Forms.BindingSource productsListBindingSource;
+        private InventoryApp.DAL.Datasets.dsProductExpiryDates dsProductExpiryDates;
+        private InventoryApp.DAL.Datasets.dsProductExpiryDatesTableAdapters.ProductsListTableAdapter productsListTableAdapter;
     }
 }

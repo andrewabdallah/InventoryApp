@@ -11,14 +11,15 @@ namespace InventoryApp.DAL.Operations
     class ProductExpiryDatesOP
     {
         #region Select
-        public static ProductExpiryDates GetProductExpiryDate()
+        public static ProductExpiryDates GetNearestProductExpiryDate(Nullable<int> ProductID)
         {
             ProductExpiryDates PExp = new ProductExpiryDates();
             SqlCeCommand com = DBCon.CeCon.CreateCommand();
 
-            com.CommandText = "SELECT PRODUCT_ID, PRODUCT_EXPIRY_DATE FROM PRODUCT_EXPIRY_DATES";
+            com.CommandText = "SELECT PRODUCT_ID, MIN(PRODUCT_EXPIRY_DATE) AS PRODUCT_EXPIRY_DATE FROM PRODUCT_EXPIRY_DATES WHERE PRODUCT_ID = @PRODUCT_ID GROUP BY PRODUCT_ID";
+            com.Parameters.AddWithValue("PRODUCT_ID", ProductID);
             SqlCeDataReader rd = com.ExecuteReader();
-            if (rd.Read() && rd.HasRows)
+            if (rd.Read())
             {
                 PExp.PRODUCT_ID = rd["PRODUCT_ID"] == DBNull.Value ? null : rd["PRODUCT_ID"].ToString().ToNullableInt();
                 PExp.PRODUCT_EXPIRY_DATE = rd["PRODUCT_EXPIRY_DATE"] == DBNull.Value ? null : rd["PRODUCT_EXPIRY_DATE"].ToString().ToNullableDateTime();

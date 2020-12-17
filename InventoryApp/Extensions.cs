@@ -4,8 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Drawing;
 using System.IO;
+using System.Windows.Forms;
 
-namespace InventoryApp.DAL
+namespace InventoryApp
 {
     public static class Extenstions
     {
@@ -37,7 +38,6 @@ namespace InventoryApp.DAL
             }
         }
 
-
         public static Image ToImage(this string _string)
         {
             Image image;
@@ -56,7 +56,7 @@ namespace InventoryApp.DAL
 
         public static Image ToImage(this byte[] _bytes)
         {
-            Image image;
+            Image image = null;
             if (_bytes == null)
             {
                 image = null;
@@ -83,6 +83,14 @@ namespace InventoryApp.DAL
                 _bytes = mStream.ToArray();
             }
             return _bytes;
+        }
+
+        public static void AdjustPictureBox(this PictureBox picB)
+        {
+            picB.Dock = DockStyle.None;
+            picB.SizeMode = PictureBoxSizeMode.StretchImage;
+            picB.Width = (int)((float)picB.Image.Width / (float)picB.Image.Height * picB.Height);
+            picB.Location = new Point((picB.Parent.Width - picB.Width) / 2, 0);
         }
     }
 }

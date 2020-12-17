@@ -45,6 +45,7 @@
             this.picProductImage.Location = new System.Drawing.Point(0, 0);
             this.picProductImage.Name = "picProductImage";
             this.picProductImage.Size = new System.Drawing.Size(233, 79);
+            this.picProductImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             // 
             // txtBarcode
             // 
@@ -52,13 +53,13 @@
             this.txtBarcode.Name = "txtBarcode";
             this.txtBarcode.Size = new System.Drawing.Size(214, 23);
             this.txtBarcode.TabIndex = 1;
+            this.txtBarcode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBarcode_KeyDown);
             // 
             // lblItemName
             // 
             this.lblItemName.Location = new System.Drawing.Point(8, 130);
             this.lblItemName.Name = "lblItemName";
             this.lblItemName.Size = new System.Drawing.Size(214, 62);
-            this.lblItemName.Text = "Item Name";
             // 
             // btnBack
             // 
@@ -96,10 +97,10 @@
             // lblExpiryDate
             // 
             this.lblExpiryDate.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold);
+            this.lblExpiryDate.ForeColor = System.Drawing.Color.Blue;
             this.lblExpiryDate.Location = new System.Drawing.Point(8, 190);
             this.lblExpiryDate.Name = "lblExpiryDate";
             this.lblExpiryDate.Size = new System.Drawing.Size(214, 23);
-            this.lblExpiryDate.Text = "Expiry Date";
             this.lblExpiryDate.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // frmCheckProduct

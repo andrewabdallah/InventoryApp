@@ -10,5 +10,4 @@ E:\Andrew\Personal\CB+\InventoryApp\InventoryApp\obj\Debug\InventoryApp.PL.frmPr
 E:\Andrew\Personal\CB+\InventoryApp\InventoryApp\obj\Debug\InventoryApp.PL.frmNewProduct.resources
 E:\Andrew\Personal\CB+\InventoryApp\InventoryApp\obj\Debug\InventoryApp.PL.frmMain.resources
 E:\Andrew\Personal\CB+\InventoryApp\InventoryApp\obj\Debug\InventoryApp.PL.frmCheckProduct.resources
-E:\Andrew\Personal\CB+\InventoryApp\InventoryApp\bin\Debug\DAL\DB\InventoryDB.sdf
-E:\Andrew\Personal\CB+\InventoryApp\InventoryApp\bin\Debug\System.Data.SqlServerCe.dll
+E:\Andrew\Personal\CB+\InventoryApp\InventoryApp\bin\Debug\DB\InventoryDB.sdf

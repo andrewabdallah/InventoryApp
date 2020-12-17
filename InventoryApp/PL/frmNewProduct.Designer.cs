@@ -34,8 +34,9 @@
             this.txtBarcode = new System.Windows.Forms.TextBox();
             this.lblItemName = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnProductExpiryDates = new System.Windows.Forms.Button();
+            this.btnSaveProduct = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // picProductImage
@@ -44,6 +45,7 @@
             this.picProductImage.Location = new System.Drawing.Point(0, 0);
             this.picProductImage.Name = "picProductImage";
             this.picProductImage.Size = new System.Drawing.Size(233, 79);
+            this.picProductImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             // 
             // txtBarcode
             // 
@@ -57,8 +59,7 @@
             // 
             this.lblItemName.Location = new System.Drawing.Point(8, 130);
             this.lblItemName.Name = "lblItemName";
-            this.lblItemName.Size = new System.Drawing.Size(214, 62);
-            this.lblItemName.Text = "Item Name";
+            this.lblItemName.Size = new System.Drawing.Size(214, 41);
             // 
             // btnBack
             // 
@@ -67,21 +68,10 @@
             this.btnBack.ForeColor = System.Drawing.Color.White;
             this.btnBack.Location = new System.Drawing.Point(8, 218);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(100, 39);
+            this.btnBack.Size = new System.Drawing.Size(214, 39);
             this.btnBack.TabIndex = 5;
             this.btnBack.Text = "Back";
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
-            // 
-            // btnSave
-            // 
-            this.btnSave.BackColor = System.Drawing.Color.Green;
-            this.btnSave.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(122, 218);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(100, 39);
-            this.btnSave.TabIndex = 6;
-            this.btnSave.Text = "Save";
             // 
             // label2
             // 
@@ -92,6 +82,31 @@
             this.label2.Text = "Scan Here";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // btnProductExpiryDates
+            // 
+            this.btnProductExpiryDates.BackColor = System.Drawing.Color.Crimson;
+            this.btnProductExpiryDates.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.btnProductExpiryDates.ForeColor = System.Drawing.Color.White;
+            this.btnProductExpiryDates.Location = new System.Drawing.Point(122, 173);
+            this.btnProductExpiryDates.Name = "btnProductExpiryDates";
+            this.btnProductExpiryDates.Size = new System.Drawing.Size(100, 39);
+            this.btnProductExpiryDates.TabIndex = 9;
+            this.btnProductExpiryDates.Text = "Expiry Dates";
+            this.btnProductExpiryDates.Click += new System.EventHandler(this.btnProductExpiryDates_Click);
+            // 
+            // btnSaveProduct
+            // 
+            this.btnSaveProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnSaveProduct.Enabled = false;
+            this.btnSaveProduct.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.btnSaveProduct.ForeColor = System.Drawing.Color.Black;
+            this.btnSaveProduct.Location = new System.Drawing.Point(8, 173);
+            this.btnSaveProduct.Name = "btnSaveProduct";
+            this.btnSaveProduct.Size = new System.Drawing.Size(100, 39);
+            this.btnSaveProduct.TabIndex = 13;
+            this.btnSaveProduct.Text = "Save";
+            this.btnSaveProduct.Click += new System.EventHandler(this.btnSaveProduct_Click);
+            // 
             // frmNewProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -99,8 +114,9 @@
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(233, 262);
             this.ControlBox = false;
+            this.Controls.Add(this.btnSaveProduct);
+            this.Controls.Add(this.btnProductExpiryDates);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lblItemName);
             this.Controls.Add(this.txtBarcode);
@@ -118,7 +134,8 @@
         private System.Windows.Forms.TextBox txtBarcode;
         private System.Windows.Forms.Label lblItemName;
         private System.Windows.Forms.Button btnBack;
-        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnProductExpiryDates;
+        private System.Windows.Forms.Button btnSaveProduct;
     }
 }
