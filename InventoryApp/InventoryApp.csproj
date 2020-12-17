@@ -45,9 +45,11 @@
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CodeBetter.Json.CF, Version=1.0.7656.4348, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="mscorlib" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlServerCe, Version=3.5.0.0, Culture=neutral, PublicKeyToken=3be235df1c8d2ad3, processorArchitecture=MSIL" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data" />
@@ -56,14 +58,61 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="DAL\API\JSON.cs" />
+    <Compile Include="DAL\API\OpenFoodFactsAPI.cs" />
+    <Compile Include="DAL\DBConnection\DBCon.cs" />
+    <Compile Include="DAL\Entities\ProductExpiryDates.cs" />
+    <Compile Include="DAL\Entities\Products.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="PL\frmProductList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="PL\frmProductList.Designer.cs">
+      <DependentUpon>frmProductList.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\frmProductExpiryDates.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\frmProductExpiryDates.Designer.cs">
+      <DependentUpon>frmProductExpiryDates.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\frmNewProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\frmNewProduct.Designer.cs">
+      <DependentUpon>frmNewProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\frmCheckProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\frmCheckProduct.Designer.cs">
+      <DependentUpon>frmCheckProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Operations\ProductExpiryDatesOP.cs" />
+    <Compile Include="DAL\Operations\ProductsOP.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="PL\frmProductList.resx">
+      <DependentUpon>frmProductList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\frmProductExpiryDates.resx">
+      <DependentUpon>frmProductExpiryDates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\frmNewProduct.resx">
+      <DependentUpon>frmNewProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\frmCheckProduct.resx">
+      <DependentUpon>frmCheckProduct.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -74,6 +123,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DAL\DB\InventoryDB.sdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BLL\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />
   <ProjectExtensions>

@@ -13,7 +13,7 @@ namespace InventoryApp
         [MTAThread]
         static void Main()
         {
-            Application.Run(new Form1());
+            Application.Run(new PL.frmMain());
         }
     }
 }

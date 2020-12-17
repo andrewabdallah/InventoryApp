@@ -1,5 +1,0 @@
-E:\Andrew\Personal\CB+\InventoryApp\InventoryApp.BLL\bin\Debug\InventoryApp.BLL.dll
-E:\Andrew\Personal\CB+\InventoryApp\InventoryApp.BLL\bin\Debug\InventoryApp.BLL.pdb
-E:\Andrew\Personal\CB+\InventoryApp\InventoryApp.BLL\obj\Debug\ResolveAssemblyReference.cache
-E:\Andrew\Personal\CB+\InventoryApp\InventoryApp.BLL\obj\Debug\InventoryApp.BLL.dll
-E:\Andrew\Personal\CB+\InventoryApp\InventoryApp.BLL\obj\Debug\InventoryApp.BLL.pdb

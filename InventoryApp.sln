@@ -3,10 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoryApp", "InventoryApp\InventoryApp.csproj", "{86536897-B431-4B2D-86A1-30FF40D56368}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoryApp.BLL", "InventoryApp.BLL\InventoryApp.BLL.csproj", "{944A1C2E-95E8-4653-8C4E-9467A04598D0}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoryApp.DAL", "InventoryApp.DAL\InventoryApp.DAL.csproj", "{3EF6A5C9-99C5-49F6-83D4-DFDF859A2EAA}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,14 +15,6 @@ Global
 		{86536897-B431-4B2D-86A1-30FF40D56368}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{86536897-B431-4B2D-86A1-30FF40D56368}.Release|Any CPU.Build.0 = Release|Any CPU
 		{86536897-B431-4B2D-86A1-30FF40D56368}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{944A1C2E-95E8-4653-8C4E-9467A04598D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{944A1C2E-95E8-4653-8C4E-9467A04598D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{944A1C2E-95E8-4653-8C4E-9467A04598D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{944A1C2E-95E8-4653-8C4E-9467A04598D0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3EF6A5C9-99C5-49F6-83D4-DFDF859A2EAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3EF6A5C9-99C5-49F6-83D4-DFDF859A2EAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3EF6A5C9-99C5-49F6-83D4-DFDF859A2EAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3EF6A5C9-99C5-49F6-83D4-DFDF859A2EAA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

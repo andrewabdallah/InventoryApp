@@ -7,13 +7,17 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace InventoryApp
+namespace InventoryApp.PL
 {
-    public partial class Form1 : Form
+    public partial class frmProductExpiryDates : Form
     {
-        public Form1()
+        public frmProductExpiryDates()
         {
             InitializeComponent();
+        }
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

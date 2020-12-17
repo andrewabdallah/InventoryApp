@@ -12,15 +12,29 @@ namespace InventoryApp.DAL
         public static int? ToNullableInt(this string _string)
         {
             int i;
-            if (int.TryParse(_string, out i)) return i;
-            return null;
+            try
+            {
+                i = int.Parse(_string);
+                return i;
+            }
+            catch
+            {
+                return null;
+            }
         }
 
         public static DateTime? ToNullableDateTime(this string _string)
         {
             DateTime d;
-            if (DateTime.TryParse(_string, out d)) return d;
-            return null;
+            try
+            {
+                d = DateTime.Parse(_string);
+                return d;
+            }
+            catch
+            {
+                return null;
+            }
         }
 
 
@@ -34,9 +48,7 @@ namespace InventoryApp.DAL
             }
             else
             {
-                MemoryStream mStream = new MemoryStream();
-                mStream.Write(_bytes, 0, Convert.ToInt32(_bytes.Length));
-                image = Image.FromStream(mStream);
+                image = _bytes.ToImage();
             }
 
             return image;
@@ -51,9 +63,7 @@ namespace InventoryApp.DAL
             }
             else
             {
-                MemoryStream mStream = new MemoryStream();
-                mStream.Write(_bytes, 0, Convert.ToInt32(_bytes.Length));
-                image = Image.FromStream(mStream);
+                image = new Bitmap(new MemoryStream(_bytes));
             }
 
             return image;
@@ -69,7 +79,7 @@ namespace InventoryApp.DAL
             else
             {
                 MemoryStream mStream = new MemoryStream();
-                _image.Save(mStream, _image.RawFormat);
+                 _image.Save(mStream,System.Drawing.Imaging.ImageFormat.Png);
                 _bytes = mStream.ToArray();
             }
             return _bytes;

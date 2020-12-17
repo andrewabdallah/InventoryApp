@@ -5,3 +5,10 @@ E:\Andrew\Personal\CB+\InventoryApp\InventoryApp\obj\Debug\InventoryApp.Properti
 E:\Andrew\Personal\CB+\InventoryApp\InventoryApp\obj\Debug\InventoryApp.csproj.GenerateResource.Cache
 E:\Andrew\Personal\CB+\InventoryApp\InventoryApp\obj\Debug\InventoryApp.exe
 E:\Andrew\Personal\CB+\InventoryApp\InventoryApp\obj\Debug\InventoryApp.pdb
+E:\Andrew\Personal\CB+\InventoryApp\InventoryApp\obj\Debug\InventoryApp.PL.frmProductList.resources
+E:\Andrew\Personal\CB+\InventoryApp\InventoryApp\obj\Debug\InventoryApp.PL.frmProductExpiryDates.resources
+E:\Andrew\Personal\CB+\InventoryApp\InventoryApp\obj\Debug\InventoryApp.PL.frmNewProduct.resources
+E:\Andrew\Personal\CB+\InventoryApp\InventoryApp\obj\Debug\InventoryApp.PL.frmMain.resources
+E:\Andrew\Personal\CB+\InventoryApp\InventoryApp\obj\Debug\InventoryApp.PL.frmCheckProduct.resources
+E:\Andrew\Personal\CB+\InventoryApp\InventoryApp\bin\Debug\DAL\DB\InventoryDB.sdf
+E:\Andrew\Personal\CB+\InventoryApp\InventoryApp\bin\Debug\System.Data.SqlServerCe.dll
